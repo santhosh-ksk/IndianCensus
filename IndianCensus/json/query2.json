@@ -1,211 +1,176 @@
 [
   {
     "State": "JAMMU & KASHMIR",
-    "Total Graduate": 692484,
     "Total male": 426555,
     "Total female": 265929
   },
   {
     "State": "HIMACHAL PRADESH",
-    "Total Graduate": 517101,
     "Total male": 293449,
     "Total female": 223652
   },
   {
     "State": "PUNJAB",
-    "Total Graduate": 1919669,
     "Total male": 960456,
     "Total female": 959213
   },
   {
     "State": "CHANDIGARH",
-    "Total Graduate": 206036,
     "Total male": 111494,
     "Total female": 94542
   },
   {
     "State": "UTTARAKHAND",
-    "Total Graduate": 1002397,
     "Total male": 568963,
     "Total female": 433434
   },
   {
     "State": "HARYANA",
-    "Total Graduate": 1994600,
     "Total male": 1183849,
     "Total female": 810751
   },
   {
     "State": "NCT OF DELHI",
-    "Total Graduate": 2918192,
     "Total male": 1636077,
     "Total female": 1282115
   },
   {
     "State": "RAJASTHAN",
-    "Total Graduate": 3526541,
     "Total male": 2461922,
     "Total female": 1064619
   },
   {
     "State": "UTTAR PRADESH",
-    "Total Graduate": 10898205,
     "Total male": 7086446,
     "Total female": 3811759
   },
   {
     "State": "BIHAR",
-    "Total Graduate": 3235648,
     "Total male": 2471458,
     "Total female": 764190
   },
   {
     "State": "SIKKIM",
-    "Total Graduate": 42848,
     "Total male": 24812,
     "Total female": 18036
   },
   {
     "State": "MANIPUR",
-    "Total Graduate": 294135,
     "Total male": 178447,
     "Total female": 115688
   },
   {
     "State": "MIZORAM",
-    "Total Graduate": 95396,
     "Total male": 56437,
     "Total female": 38959
   },
   {
     "State": "TRIPURA",
-    "Total Graduate": 165796,
     "Total male": 107556,
     "Total female": 58240
   },
   {
     "State": "MEGHALAYA",
-    "Total Graduate": 154962,
     "Total male": 77020,
     "Total female": 77942
   },
   {
     "State": "ASSAM",
-    "Total Graduate": 1130319,
     "Total male": 718327,
     "Total female": 411992
   },
   {
     "State": "WEST BENGAL",
-    "Total Graduate": 5355274,
     "Total male": 3463977,
     "Total female": 1891297
   },
   {
     "State": "JHARKHAND",
-    "Total Graduate": 1532170,
     "Total male": 1039975,
     "Total female": 492195
   },
   {
     "State": "ODISHA",
-    "Total Graduate": 1965889,
     "Total male": 1303987,
     "Total female": 661902
   },
   {
     "State": "CHHATTISGARH",
-    "Total Graduate": 1216588,
     "Total male": 799269,
     "Total female": 417319
   },
   {
     "State": "MADHYA PRADESH",
-    "Total Graduate": 3591389,
     "Total male": 2311433,
     "Total female": 1279956
   },
   {
     "State": "GUJARAT",
-    "Total Graduate": 3471795,
     "Total male": 2083498,
     "Total female": 1388297
   },
   {
     "State": "DAMAN & DIU",
-    "Total Graduate": 13349,
     "Total male": 8774,
     "Total female": 4575
   },
   {
     "State": "DADRA & NAGAR HAVELI",
-    "Total Graduate": 21779,
     "Total male": 13880,
     "Total female": 7899
   },
   {
     "State": "MAHARASHTRA",
-    "Total Graduate": 9505517,
     "Total male": 5730823,
     "Total female": 3774694
   },
   {
     "State": "ANDHRA PRADESH",
-    "Total Graduate": 6307880,
     "Total male": 4125374,
     "Total female": 2182506
   },
   {
     "State": "KARNATAKA",
-    "Total Graduate": 4496451,
     "Total male": 2799580,
     "Total female": 1696871
   },
   {
     "State": "ARUNACHAL PRADESH",
-    "Total Graduate": 86937,
     "Total male": 58823,
     "Total female": 28114
   },
   {
     "State": "GOA",
-    "Total Graduate": 152131,
     "Total male": 77010,
     "Total female": 75121
   },
   {
     "State": "KERALA",
-    "Total Graduate": 2662074,
     "Total male": 1187364,
     "Total female": 1474710
   },
   {
     "State": "NAGALAND",
-    "Total Graduate": 165044,
     "Total male": 96513,
     "Total female": 68531
   },
   {
     "State": "TAMIL NADU",
-    "Total Graduate": 6073079,
     "Total male": 3495384,
     "Total female": 2577695
   },
   {
     "State": "PUDUCHERRY",
-    "Total Graduate": 154784,
     "Total male": 87072,
     "Total female": 67712
   },
   {
     "State": "LAKSHADWEEP",
-    "Total Graduate": 4288,
     "Total male": 2682,
     "Total female": 1606
   },
   {
     "State": "ANDAMAN & NICOBAR ISLANDS",
-    "Total Graduate": 24580,
     "Total male": 13832,
     "Total female": 10748
   }

@@ -60,22 +60,18 @@ obj.on('line', function(line) {
 });
 
 obj.on('line', function(line) {
-    var jsonObj = {};
     var cols = line.split(',');
 
     if (cols[3] != 'INDIA' && cols[4] === 'Total' && cols[5] == 'All ages') {
         var state = cols[3];
         state = state.substr(8, (state.length - 1));
-
+        jsonObj = {};
         jsonObj['State'] = state;
-        jsonObj['Total Graduate'] = +cols[39];
         jsonObj['Total male'] = +cols[40];
         jsonObj['Total female'] = +cols[41];
-
         var index = findIndexGrad(cols[3]);
         if (index != null) {
             var result = graArray[index];
-            result['Total Graduate'] += jsonObj['Total Graduate'];
             result['Total male'] += jsonObj['Total male'];
             result['Total female'] += jsonObj['Total female'];
             graArray[index]=result;

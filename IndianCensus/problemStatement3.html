@@ -1,0 +1,300 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style> /* set the CSS */
+  .bar { fill: green; }
+  .bar:hover{
+    fill: grey;
+  }
+  </style>
+  <script src="d3/d3.js"></script>
+</head>
+<body>
+
+    <script>
+            // set the dimensions and margins of the graph
+            var margin = {
+                    top: 20,
+                    right: 20,
+                    bottom: 30,
+                    left: 100
+                },
+                width = 1350 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+
+            // set the ranges
+            var x = d3.scaleBand()
+                .range([0, width])
+                .padding(0.1);
+            var y = d3.scaleLinear()
+                .range([height, 0]);
+
+            // append the svg object to the body of the page
+            // append a 'group' element to 'svg'
+            // moves the 'group' element to the top left margin
+            var svg = d3.select("body").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            // get the data
+            d3.json("json/education_category_json.json", function(error,data) {
+                if (error) { throw error;}
+
+                // format the data
+                data.forEach(function(d) {
+                    d.totPop = +d.totPop;
+                });
+
+                // Scale the range of the data in the domains
+                x.domain(data.map(function(d) {
+                    return d.eduCat;
+                }));
+                y.domain([0, d3.max(data, function(d) {
+                    return d.totPop;
+                })]);
+
+                // append the rectangles for the bar chart
+                svg.selectAll(".bar")
+                    .data(data)
+                    .enter().append("rect")
+                    .attr("class", "bar")
+                    .attr("x", function(d) {
+                      console.log(d.eduCat);
+                        return x(d.eduCat);
+                    })
+                    .attr("width", x.bandwidth())
+                    .attr("y", function(d) {
+                      console.log(d.totPop);
+                        return y(d.totPop);
+                    })
+                    .attr("height", function(d) {
+                      console.log(d.totPop);
+                        return height - y(d.totPop);
+                    });
+                // add the x Axis
+                svg.append("g")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x));
+                // add the y Axis
+                svg.append("g")
+                    .call(d3.axisLeft(y));
+            });
+        </script>
+  <script type="text/javascript">
+
+
+  var margin = {top: 20, right: 20, bottom: 400, left: 100},
+      width = 1350 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
+
+  var x = d3.scaleBand().range([0, width]).padding(0.1);
+
+  var y = d3.scaleLinear().range([height, 0]);
+
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  d3.json("JS-Cencus-Distribution/outPutFiles/eduCatWise.json", function(error, data) {
+    if (error) throw error;
+    // alert(data);
+    // alert("sadasd");
+    //var xDomain = data.map(function(d) { return d.eduCat; });
+
+    x.domain(data.map(function(d) { return d.a; }));
+    y.domain([0, d3.max(data, function(d) {  return d.totPop; })]);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", function(d) {
+                return "rotate(-65)"
+                });
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(d3.axisLeft(y))
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Total Literate Population");
+
+    svg.selectAll(".bar")
+        .data(data)
+      .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d) { return x(d.eduCat); })
+        .attr("width", x.bandwidth())
+        .attr("y", function(d) { return y(d.totPop); })
+        .attr("height", function(d) { return height - y(d.totPop); })
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide);
+
+  });
+
+  function type(d) {
+    d.frequency = +d.frequency;
+    return d;
+  }
+
+  </script>
+  <script>
+  // set the dimensions and margins of the graph
+  var margin = {top: 20, right: 20, bottom: 30, left: 100},
+  width = 1500 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
+
+  // set the ranges
+  var x = d3.scaleBand()
+  .range([0, width])
+  .padding(0.1);
+  var y = d3.scaleLinear()
+  .range([height, 0]);
+
+  // append the svg object to the body of the page
+  // append a 'group' element to 'svg'
+  // moves the 'group' element to the top left margin
+  var svg = d3.select("body").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform",
+  "translate(" + margin.left + "," + margin.top + ")");
+
+  // get the data
+  d3.json("json/query3.json", function(error, data) {
+    if (error) throw error;
+
+    // Scale the range of the data in the domains
+    x.domain(['Literate','Literaturewithouteducationlevel','BelowPrimary','Primary','Middle','Matric','HrSecPreuniversity','NonTechnicalDiplamo','TechnicalDiplamo','GraduateandAbove','Unclassified']);
+    y.domain([0, d3.max(data, function(d) { return data[0].Literate; })]);
+
+    // append the rectangles for the bar chart
+    svg.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("y", function(d) { return y(d['Literate']); })
+    .attr("height", function(d) { return height - y(d['Literate']); });
+    // add the x Axis
+    svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+    // add the y Axis
+    svg.append("g")
+    .call(d3.axisLeft(y));
+  })
+</script>
+</body>-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8">
+       <title>Education Category wise Bar chart</title>
+       <style>
+           /* set the CSS */
+
+           .bar {
+               fill: lightgreen;
+           }
+
+           .bar:hover {
+               fill: grey;
+           }
+       </style>
+
+       <script src="d3/d3.js"></script>
+   </head>
+
+   <body>
+       <!-- load the d3.js library -->
+       <script>
+           // set the dimensions and margins of the graph
+           var margin = {
+                   top: 20,
+                   right: 20,
+                   bottom: 30,
+                   left: 100
+               },
+               width = 1350 - margin.left - margin.right,
+               height = 400 - margin.top - margin.bottom;
+
+           // set the ranges
+           var x = d3.scaleBand()
+               .range([0, width])
+               .padding(0.1);
+           var y = d3.scaleLinear()
+               .range([height, 0]);
+
+           // append the svg object to the body of the page
+           // append a 'group' element to 'svg'
+           // moves the 'group' element to the top left margin
+           var svg = d3.select("body").append("svg")
+               .attr("width", width + margin.left + margin.right)
+               .attr("height", height + margin.top + margin.bottom)
+               .append("g")
+               .attr("transform",
+                   "translate(" + margin.left + "," + margin.top + ")");
+
+           // get the data
+           d3.json("json/query3.json", function(error,data) {
+               if (error) { throw error;}
+
+               // format the data
+               data.forEach(function(d) {
+                   d.totPop = +d.totPop;
+               });
+
+               // Scale the range of the data in the domains
+               x.domain(data.map(function(d) {
+                   return d.eduCat;
+               }));
+               y.domain([0, d3.max(data, function(d) {
+                   return d.totPop;
+               })]);
+
+               // append the rectangles for the bar chart
+               svg.selectAll(".bar")
+                   .data(data)
+                   .enter().append("rect")
+                   .attr("class", "bar")
+                   .attr("x", function(d) {
+                     console.log(d.eduCat);
+                       return x(d.eduCat);
+                   })
+                   .attr("width", x.bandwidth())
+                   .attr("y", function(d) {
+                     console.log(d.totPop);
+                       return y(d.totPop);
+                   })
+                   .attr("height", function(d) {
+                     console.log(d.totPop);
+                       return height - y(d.totPop);
+                   });
+               // add the x Axis
+               svg.append("g")
+                   .attr("transform", "translate(0," + height + ")")
+                   .call(d3.axisBottom(x));
+               // add the y Axis
+               svg.append("g")
+                   .call(d3.axisLeft(y));
+           });
+       </script>
+     </body>
+</html>
