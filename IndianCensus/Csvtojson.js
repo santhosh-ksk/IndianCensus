@@ -91,37 +91,67 @@ obj.on('line', function(line) {
 
     if (cols[3] === 'INDIA' && cols[4] === 'Total' && cols[5] === 'All ages') {
         if(eduArray.length===0){
-        eduArray.push({
-          'Literate':+cols[12],
-          'Literaturewithouteducationlevel' : +cols[15] ,
-          'BelowPrimary' : +cols[18] ,
-          'Primary' : +cols[21] ,
-          'Middle' : +cols[24] ,
-          'Matric' : +cols[27] ,
-          'HrSecIntermediatePreuniversitySeniorsecondary' : +cols[30] ,
-          'NonTechnicalDiplamo' : +cols[33] ,
-          'TechnicalDiplamo' : +cols[36] ,
-          'GraduateandAbove' : +cols[39] ,
-          'Unclassified' : +cols[42]
-          });
+            eduArray.push({
+              'eduCat': 'Literate',
+              'totPop': +cols[12]
+            });
+            eduArray.push({
+              'eduCat': 'Literaturewithouteducationlevel',
+              'totPop': +cols[15]
+            });
+            eduArray.push({
+              'eduCat': 'BelowPrimary',
+              'totPop': +cols[18]
+            });
+            eduArray.push({
+              'eduCat': 'Primary',
+              'totPop': +cols[21]
+            });
+            eduArray.push({
+              'eduCat': 'Middle',
+              'totPop': +cols[24]
+            });
+            eduArray.push({
+              'eduCat': 'Matric',
+              'totPop': +cols[27]
+            });
+            eduArray.push({
+              'eduCat': 'HrSecIntermediatePreuniversitySeniorsecondary',
+              'totPop': +cols[30]
+            });
+            eduArray.push({
+              'eduCat': 'NonTechnicalDiplamo',
+              'totPop': +cols[33]
+            });
+            eduArray.push({
+              'eduCat': 'TechnicalDiplamo',
+              'totPop': +cols[36]
+            });
+            eduArray.push({
+              'eduCat': 'GraduateandAbove',
+              'totPop': +cols[39]
+            });
+            eduArray.push({
+              'eduCat': 'Unclassified',
+              'totPop': +cols[42]
+            });
         }
         else{
-          eduArray[0]['Literate'] =eduArray[0]['Literate'] + +cols[12];
-          eduArray[0]['Literaturewithouteducationlevel'] =eduArray[0]['Literaturewithouteducationlevel'] + +cols[15];
-          eduArray[0]['BelowPrimary'] =eduArray[0]['BelowPrimary'] + +cols[18];
-          eduArray[0]['Primary'] =eduArray[0]['Primary'] + +cols[21];
-          eduArray[0]['Middle'] =eduArray[0]['Middle'] + +cols[24];
-          eduArray[0]['Matric'] =eduArray[0]['Matric'] + +cols[27];
-          eduArray[0]['HrSecIntermediatePreuniversitySeniorsecondary'] =eduArray[0]['HrSecIntermediatePreuniversitySeniorsecondary'] + +cols[30];
-          eduArray[0]['NonTechnicalDiplamo'] =eduArray[0]['NonTechnicalDiplamo'] + +cols[33];
-          eduArray[0]['TechnicalDiplamo'] =eduArray[0]['TechnicalDiplamo'] +  +cols[36];
-          eduArray[0]['GraduateandAbove'] =eduArray[0]['GraduateandAbove'] + +cols[39];
-          eduArray[0]['Unclassified'] = eduArray[0]['Unclassified'] + +cols[42];
+          eduArray[0]['totPop'] =eduArray[0]['totPop'] + +cols[12];
+          eduArray[1]['totPop'] =eduArray[1]['totPop'] + +cols[15];
+          eduArray[2]['totPop'] =eduArray[2]['totPop'] + +cols[18];
+          eduArray[3]['totPop'] =eduArray[3]['totPop'] + +cols[21];
+          eduArray[4]['totPop'] =eduArray[4]['totPop'] + +cols[24];
+          eduArray[5]['totPop'] =eduArray[5]['totPop'] + +cols[27];
+          eduArray[6]['totPop'] =eduArray[6]['totPop'] + +cols[30];
+          eduArray[7]['totPop'] =eduArray[7]['totPop'] + +cols[33];
+          eduArray[8]['totPop'] =eduArray[8]['totPop'] +  +cols[36];
+          eduArray[9]['totPop'] =eduArray[9]['totPop'] +  +cols[39];
+          eduArray[10]['totPop'] = eduArray[10]['totPop'] + +cols[42];
 
         }
     }
 });
-
 
 //writing it on the JSON file
 obj.on('close', function() {

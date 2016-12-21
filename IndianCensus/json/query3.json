@@ -1,15 +1,46 @@
 [
   {
-    "Literate": 929164282,
-    "Literaturewithouteducationlevel": 42917688,
-    "BelowPrimary": 187922838,
-    "Primary": 230286790,
-    "Middle": 165085953,
-    "Matric": 123969998,
-    "HrSecIntermediatePreuniversitySeniorsecondary": 90159789,
-    "NonTechnicalDiplamo": 1162928,
-    "TechnicalDiplamo": 8290083,
-    "GraduateandAbove": 75595327,
-    "Unclassified": 3772888
+    "eduCat": "Literate",
+    "totPop": 929164282
+  },
+  {
+    "eduCat": "Literaturewithouteducationlevel",
+    "totPop": 42917688
+  },
+  {
+    "eduCat": "BelowPrimary",
+    "totPop": 187922838
+  },
+  {
+    "eduCat": "Primary",
+    "totPop": 230286790
+  },
+  {
+    "eduCat": "Middle",
+    "totPop": 165085953
+  },
+  {
+    "eduCat": "Matric",
+    "totPop": 123969998
+  },
+  {
+    "eduCat": "HrSecIntermediatePreuniversitySeniorsecondary",
+    "totPop": 90159789
+  },
+  {
+    "eduCat": "NonTechnicalDiplamo",
+    "totPop": 1162928
+  },
+  {
+    "eduCat": "TechnicalDiplamo",
+    "totPop": 8290083
+  },
+  {
+    "eduCat": "GraduateandAbove",
+    "totPop": 75595327
+  },
+  {
+    "eduCat": "Unclassified",
+    "totPop": 3772888
   }
 ]
